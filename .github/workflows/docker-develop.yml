@@ -2,10 +2,10 @@ name: Docker push for develop
 
 on:
   push:
-    branches:
-    - develop
-  schedule:
-    - cron: '*/30 * * * *'
+#    branches:
+#    - develop
+#  schedule:
+#    - cron: '*/30 * * * *'
 
 jobs:
   build_and_push:
@@ -27,6 +27,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
-          push: true
-          tags: nwtgck/piping-server:develop
+#          platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
+          platforms: linux/arm/v6
+          push: false
+          tags: nwtgck/piping-server:build_test
