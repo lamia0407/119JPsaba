@@ -1,4 +1,4 @@
-FROM node:20.15.1-bullseye
+FROM node:20.15-bullseye
 
 LABEL maintainer="Ryo Ota <nwtgck@nwtgck.org>"
 
